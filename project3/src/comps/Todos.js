@@ -10,7 +10,7 @@ const Todos = () => {
                  <li className='p-2'>Go fishing <Button doWhat="Delete"/></li>
              </ul>
              <form>
-                 <input type='text' className="bg-gray-100 p-2 rounded-2xl" />
+                 <input type='text' className="bg-gray-400 p-2 rounded-2xl" />
                  <Button doWhat="Add Task" />
              </form>
          </div>

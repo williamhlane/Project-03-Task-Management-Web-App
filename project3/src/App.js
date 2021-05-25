@@ -6,14 +6,11 @@ import Header from './comps/Header'
 import Nav from './comps/Nav'
 import Todos from './comps/Todos'
 import About from './comps/About'
+import { BrowserRouter, Route } from 'react-router-dom';
 
-import { BrowserRouter, Route,  useLocation } from 'react-router-dom';
 
 
 function App() {
-
-
- //TABS SOMETHING LIKE THIS useLocation: about ? bg-black : bg-white
 
   return (
     <div className='bg-white'>
