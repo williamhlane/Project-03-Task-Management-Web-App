@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router-dom';
+//THIS IS AN ALTERNATIVE TO THE USE ON NavLink but will not be used in this application. It is left in as an example.
 const Nav = () => {
     const location = useLocation();
     const pathname = location.pathname;

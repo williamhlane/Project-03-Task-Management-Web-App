@@ -1,4 +1,5 @@
-const Button = ({doWhat}) => {
+const Button = () => {
+    let doWhat = "Delete"
     return(
         <button className={(doWhat === "Delete") ? "bg-red-600 text-white p-2 rounded-2xl" : "bg-green-700 text-white p-2 rounded-2xl"} >
                {doWhat}
