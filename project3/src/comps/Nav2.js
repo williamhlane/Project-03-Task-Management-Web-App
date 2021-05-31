@@ -5,7 +5,7 @@ const Nav = () => {
 
     return (
 
-        <nav className="bg-gray-900 ">
+        <nav className="bg-green-900 ">
             <ul>
                 <li className="inline">
                     <NavLink className={NavNotActive} activeClassName={NavActive} exact to='/'> Home </NavLink>
