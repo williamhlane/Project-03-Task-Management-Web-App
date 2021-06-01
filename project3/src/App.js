@@ -12,6 +12,7 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 
 function App() {
+  //This is the array that hold the infromation stored with useState
   const [todos, setTodos] = useState([
     {
       id: 1,
@@ -43,9 +44,11 @@ function App() {
     },
 
   ])
+  //This fucntion changes the showActive and showCompeleted in the array for the toggle.
   const whatToShow = (active, completed) => {
     setTodos(todos.map((todo) => true ? { id: todo.id, text: todo.text, completed: todo.completed, showActive: active, showCompleted: completed } : null))
   }
+  //Add a todo to the list
   const addTodo = (todo) => {
     let showActive = true
     let showCompleted = false
@@ -58,7 +61,7 @@ function App() {
         showCompleted = todo.showCompleted
       ))
     }
-    let id = todos.length + 1
+    const id = Math.floor(Math.random() * 10000) + 1
     let text = todo.todoText
 
     const newTodo = { id, text, f, showActive, showCompleted }
@@ -67,9 +70,11 @@ function App() {
 
 
   }
+  //delete a todo fromt he list
   const deleteTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id))
   }
+  //change the todo completed when the checkbox next to it is checked.
   const todoCompleted = (id, propCompleted) => {
     propCompleted = !propCompleted
     setTodos(todos.map((todo) =>
